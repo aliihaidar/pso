@@ -207,6 +207,18 @@ style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333
         <!-- .container start -->
         <div class="container">
             <!-- .row start -->
+            <div class="row section-info">
+                <div class="col-md-12">
+                    <p class="sup-title">Work Quality</p>    
+                    <h2 class="section-title"><i>Our</i> Services</h2>
+                    <div class="big-divider"></div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas. Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <!-- .item start -->
                 <div class="col-md-3 item d-animate d-opacity d-delay02">
