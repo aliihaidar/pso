@@ -55,97 +55,67 @@
                 <li data-transition="slideleft" data-slotamount="7" data-masterspeed="700">
 
                     <!-- LAYER NR. 1 -->
-                    <div class="tp-caption lfr start" 
+                    <div class="tp-caption lfb start" 
                     data-x="right" 
-                    data-hoffset="-150" 
-                    data-y="200" 
+                    data-hoffset="-420" 
+                    data-y="80" 
                     data-speed="800" 
                     data-start="750" 
                     data-easing="Power4.easeOut" 
                     data-endspeed="300" 
                     data-endeasing="Power1.easeIn" 
                     data-captionhidden="off" 
-                    style='font-family: "Raleway"; font-size: 74px; font-weight: 700; color: #333333;'
-                    >WE ARE <span style="color: #e97e59;">SPEED</span>
+                    style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #fff; border: 1px solid #fff; padding:20px 35px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;'
+                    >ADVERTISE WITH US
                 </div>
 
                 <!-- LAYER NR. 2 -->
-                <div class="tp-caption lfr start" 
+                <div class="tp-caption lfb start" 
                 data-x="right" 
-                data-hoffset="-155" 
-                data-y="260" 
+                data-hoffset="-420" 
+                data-y="160" 
                 data-speed="800" 
-                data-start="1050" 
+                data-start="950" 
                 data-easing="Power4.easeOut" 
                 data-endspeed="300" 
                 data-endeasing="Power1.easeIn" 
                 data-captionhidden="off" 
-                style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333;'
-                >GET UNIQUE LAYOUT
+                style='font-family: "Roboto"; font-size: 13px; font-weight: 300; color: #fff; letter-spacing: 5px;'
+                >READY TO LAUNCH YOUR INSTAGRAM ADS
             </div>
 
-            <!-- LAYER NR. 3 -->
-            <div class="tp-caption lfr start" 
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption lfb start" 
             data-x="right" 
-            data-hoffset="-155" 
-            data-y="325" 
+            data-hoffset="-530" 
+            data-y="180" 
             data-speed="800" 
-            data-start="1250" 
+            data-start="1050" 
             data-easing="Power4.easeOut" 
             data-endspeed="300" 
             data-endeasing="Power1.easeIn" 
             data-captionhidden="off" 
-            style='font-family: "Roboto"; font-size: 16px; font-weight: 300; color: #333333;text-align: right; width: 520px;'
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/> Mauris commodo est eget enim ullamcorper porta. Ut dapibus diam ante,<br/> sit amet vehicula mi convallis et. Integer vitae scelerisque leo.
+            style='font-family: "Roboto"; font-size: 13px; font-weight: 300; color: #fff; letter-spacing: 5px;'
+            >WHEREVER YOU ARE!
         </div>
 
-        <!-- LAYER NR. 4 -->
-        <div class="tp-caption lfr start" 
+        <!-- LAYER NR. 3 -->
+        <div class="tp-caption lfb start" 
         data-x="right" 
-        data-hoffset="-160" 
-        data-y="400" 
+        data-hoffset="-570" 
+        data-y="200" 
         data-speed="800" 
-        data-start="1450" 
+        data-start="1150" 
         data-easing="Power4.easeOut" 
         data-endspeed="300" 
         data-endeasing="Power1.easeIn" 
         data-captionhidden="off" 
         style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333;'
-        ><div class="small-divider black" style="width:465px;"></div>
+        ><a href="#" class="btn banner-btn">Learn More&nbsp;&nbsp;<i class="fa fa-chevron-circle-right" style="color: #fff !important"></i></a>
     </div>
 
-    <!-- LAYER NR. 5 -->
-    <div class="tp-caption lfr start" 
-    data-x="right" 
-    data-hoffset="-300" 
-    data-y="470" 
-    data-speed="800" 
-    data-start="1650" 
-    data-easing="Power4.easeOut" 
-    data-endspeed="300" 
-    data-endeasing="Power1.easeIn" 
-    data-captionhidden="off" 
-    style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333;'
-    ><a href="#" class="btn btn-transparent-black btn-active-default">Get Started</a>
-</div>
-
-<!-- LAYER NR. 5 -->
-<div class="tp-caption lfr start" 
-data-x="right" 
-data-hoffset="-160" 
-data-y="470" 
-data-speed="800" 
-data-start="1850" 
-data-easing="Power4.easeOut" 
-data-endspeed="300" 
-data-endeasing="Power1.easeIn" 
-data-captionhidden="off" 
-style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333;'
-><a href="#" class="btn btn-transparent-black btn-active-default">Learn More</a>
-</div>
-
-<!-- MAIN IMAGE -->
-<img src="img/slider_01.jpg"  alt="slidebg1" data-lazyload="img/slider_01.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+    <!-- MAIN IMAGE -->
+    <img src="img/slider_01.png"  alt="slidebg1" data-lazyload="img/slider_01.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 </li>
 <li data-transition="slideleft" data-slotamount="7" data-masterspeed="700">
 
@@ -195,7 +165,7 @@ style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333
 </div>
 
 <!-- MAIN IMAGE -->
-<img src="img/slider_03.jpg"  alt="slidebg3" data-lazyload="img/slider_03.jpg" data-bgposition="center bottom" data-bgfit="normal" data-bgrepeat="no-repeat">
+<img src="img/slider_01.png"  alt="slidebg3" data-lazyload="img/slider_01.png" data-bgposition="center bottom" data-bgfit="normal" data-bgrepeat="no-repeat">
 </li>
 </ul>
 <div class="tp-bannertimer"></div>  </div>
@@ -543,5 +513,18 @@ style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333
                 <script src="js/scrolling_pack.js"></script><!-- Scrolling Pack JS -->
                 <script src="js/script.js"></script><!-- Last file with all custom scripts -->
             </body>
+
+            <style type="text/css">
+
+            .banner-btn
+            {
+                color: #00ADEE !important;
+            }
+            .banner-btn:hover
+            {
+                color: #fff !important;
+            }
+
+            </style>
 
             </html>
