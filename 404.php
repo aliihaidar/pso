@@ -62,7 +62,7 @@
                     <div class="col-xs-6">
                         <ul class="breadcrumb">
                             <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="404.php">404 Error</a></li>
                         </ul>
                     </div>
                 </div><!-- .row end -->
@@ -104,7 +104,7 @@
             <!-- .row start -->
             <div class="row text-center">
                 <div class="col-md-12">
-                    <a href="index.html" class="btn btn-default">Go to Home</a>
+                    <a href="index.php" class="btn btn-default">Go to Home</a>
                 </div>
             </div><!-- .row end -->
             <div class="row"></div>
