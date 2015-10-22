@@ -39,13 +39,13 @@
                     <!-- #navbar start -->
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="services.php" class="navbar-toggle">Services</a></li>
-                            <li><a href="about.php" class="navbar-toggle">About Us</a></li>
-                            <li><a href="portfolio.php">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li class="<?= (($page=='home')?'active':'') ?>"><a href="index.php">Home</a></li>
+                            <li class="<?= (($page=='services')?'active':'') ?>"><a href="services.php" class="navbar-toggle">Services</a></li>
+                            <li class="<?= (($page=='about')?'active':'') ?>"><a href="about.php" class="navbar-toggle">About Us</a></li>
+                            <li class="<?= (($page=='portfolio')?'active':'') ?>"><a href="portfolio.php">Portfolio</a></li>
+                            <li class="<?= (($page=='blog')?'active':'') ?>"><a href="#">Blog</a></li>
+                            <li class="<?= (($page=='features')?'active':'') ?>"><a href="#">Features</a></li>
+                            <li class="<?= (($page=='contact')?'active':'') ?>"><a href="contact.php">Contact</a></li>
                         </ul>
                     </div><!-- #navbar end -->
                 </div><!-- .container start -->
@@ -53,3 +53,10 @@
         </div><!-- .container end -->
     </header><!-- #header end -->
 </div>
+
+<style>
+.active a
+{
+    color: #00ADEE !important;
+}
+</style>

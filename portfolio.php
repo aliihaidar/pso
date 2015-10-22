@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php $page='portfolio'; ?>
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PSO - Portfolio</title>

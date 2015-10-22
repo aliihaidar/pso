@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from speed-up.borisolhor.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Oct 2015 09:21:21 GMT -->
+<?php $page='about'; ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>SpeedUp Responsive Bootstrap Template</title>

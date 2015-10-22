@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php $page='home'; ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title> PSO - Home</title>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+<?php $page='services'; ?>
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PSO - Services</title>
@@ -38,7 +38,7 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,200,100' rel='stylesheet' type='text/css'>
         
         <!-- Icons -->
-        <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
         
     </head>
 
