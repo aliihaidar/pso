@@ -104,6 +104,14 @@ define('SERVICE_PHOTO_MEDBIG', '',     true);
 define('SERVICE_PHOTO_LRG',    '',     true);
 
 /* residence section photo sizes */
+define('REQUEST_PHOTO_BO',    '100x100',     true);
+define('REQUEST_PHOTO_SML',    '200x120',     true);
+define('REQUEST_PHOTO_MED',    '360x360',     true);
+define('REQUEST_PHOTO_BIG',    '765x570',     true);
+define('REQUEST_PHOTO_MEDBIG', '',     true);
+define('REQUEST_PHOTO_LRG',    '',     true);
+
+/* residence section photo sizes */
 define('PORTFOLIO_PHOTO_BO',    '100x100',     true);
 define('PORTFOLIO_PHOTO_SML',    '200x120',     true);
 define('PORTFOLIO_PHOTO_MED',    '360x360',     true);
