@@ -515,9 +515,9 @@ style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333
                     </div><!-- .partners end -->
                 </section>
 
-                <!-- #footer-wrapper start -->
+                <!-- #footer start -->
                 <?php include 'footer.php'; ?>
-                <!-- #footer-wrapper start -->
+                <!-- #footer end -->
 
                 <script src="js/jquery-1.11.0.min.js"></script><!-- jQuery Library -->
                 <script src="js/jquery.bootstrap.min.js"></script><!-- bootstrap -->
