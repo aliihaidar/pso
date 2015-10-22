@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title> PSO - Homepage</title>
+    <title> PSO - Home</title>
     <meta name="description" content="SpeedUp Responsive Bootstrap Template">
     <meta name="author" content="borisolhor">
     <meta name="keywords" content="HTML, CSS, HTML5, template, corporate, jQuery, portfolio, theme, business">
