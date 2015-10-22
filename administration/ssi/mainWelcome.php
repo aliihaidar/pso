@@ -1,0 +1,1 @@
+<span class="h6">Welcome</span> to <span class="projId"><?php echo PROJECT_NAME; ?></span> BackOffice
