@@ -1,3 +1,73 @@
+<?php
+include_once "administration/conf/config.server.php";
+include_once CLASS_PATH .'pso_portfolio_cat.class.php';
+include_once CLASS_PATH .'pso_portfolio.class.php';
+
+
+/* Portfolio Cat*/
+
+$objPorCat    = new pso_portfolio_cat();
+
+$whereClausePorCat = 'WHERE pocat_published=1 ORDER BY pocat_order ASC';
+
+$objPorCat->Select(array('pocat_title','pocat_id', 'pocat_order', 'pocat_published'), '' ,$whereClausePorCat, '', false);
+
+$printPorCat ='';
+$printPortfolio ='';
+
+while (!$objPorCat->EOF()) {
+    $rowPorCat    = $objPorCat->Row();
+	
+	$printPorCat .='<button class="btn btn-portfolio-filter btn-white btn-active-primary" data-filter=".cat-'.$rowPorCat->pocat_id.'">'.$rowPorCat->pocat_title.'</button>';
+	
+	
+/* // Portfolio Cat */
+
+/* Portfolio*/
+
+$objPortfolio    = new pso_portfolio();
+
+$whereClausePortfolio = 'WHERE po_published=1 AND po_pocat_id='.$rowPorCat->pocat_id;
+
+$objPortfolio->Select(array('po_pocat_id','po_id', 'po_title','po_link','po_desc' ,'po_img','po_published'), '' ,$whereClausePortfolio, '', false);
+
+
+while (!$objPortfolio->EOF()) {
+    $rowPortfolio    = $objPortfolio->Row();
+	
+	$PortfolioDesc = strip_tags($rowPortfolio->po_desc);
+		if(strlen($rowPortfolio->po_desc)>100){
+			$PortfolioDesc = substr($PortfolioDesc,0,100);
+			$PortfolioDesc = explode(' ', $PortfolioDesc);
+			array_pop($PortfolioDesc);
+			$PortfolioDesc = implode(' ', $PortfolioDesc);
+			$PortfolioDesc .= "...";
+		}
+	
+	$printPortfolio .='<div class="portfolio-grid-item extended cat-'.$rowPorCat->pocat_id.'">
+						<div class="portfolio-info">
+							<div class="links">
+								<a href="'.PROJECT_UPLOAD_BIG_URL.$rowPortfolio->po_img.'" class="preview"><i class="fa fa-search"></i></a>
+								<a href="#" class="open"><i class="fa fa-external-link"></i></a>
+							</div>
+						</div>
+						<div class="hover-layer all-transitions"></div>
+						<img src="'.PROJECT_UPLOAD_MED_URL.$rowPortfolio->po_img.'" alt="">
+						<div class="bottom-info">
+							<h6 class="portfolio-title">'.$rowPortfolio->po_title.'</h6>
+							<div class="meta">
+								<div class="category">'.$PortfolioDesc.'</div>
+							</div>
+						</div>
+					</div>';
+		}
+}                     
+
+/* // Portfolio */
+		
+?>
+
+
 <!DOCTYPE html>
 <html>
 <?php $page='portfolio'; ?>
@@ -80,231 +150,12 @@
                         <div class="col-md-12">
                             <!-- .portfolio-button-group start -->
                             <div class="portfolio-button-group filter-button-group">
-                                <button class="btn btn-portfolio-filter btn-white btn-active-primary active" data-filter="*">All</button>
-                                <button class="btn btn-portfolio-filter btn-white btn-active-primary" data-filter=".web-design">Web Design</button>
-                                <button class="btn btn-portfolio-filter btn-white btn-active-primary" data-filter=".ui-design">UI Design</button>
-                                <button class="btn btn-portfolio-filter btn-white btn-active-primary" data-filter=".creative">Creative</button>
-                                <button class="btn btn-portfolio-filter btn-white btn-active-primary" data-filter=".graphics">Graphics</button>
-                                <button class="btn btn-portfolio-filter btn-white btn-active-primary" data-filter=".mockup">Mockup</button>
+                 <button class="btn btn-portfolio-filter btn-white btn-active-primary active" data-filter="*">All</button>
+                        <?php echo $printPorCat;?>        
                             </div><!-- .portfolio-button-group end -->
                             <!-- .portfolio-grid start -->
                             <div class="portfolio-grid">
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended creative">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-1.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-1.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Creative</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info all-transitions">
-                                        <div class="links">
-                                            <a href="img/portfolio-2.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-2.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended graphics">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-3.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-3.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Graphics</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended graphics">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-4.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-4.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Graphics</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-5.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-5.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended ui-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-6.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-6.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">UI Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-7.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-7.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-8.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-8.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-9.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-9.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-10.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-10.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-11.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-11.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
-                                <!-- .portfolio-grid-item start -->
-                                <div class="portfolio-grid-item extended mockup web-design">
-                                    <div class="portfolio-info">
-                                        <div class="links">
-                                            <a href="img/portfolio-12.png" class="preview"><i class="fa fa-search"></i></a>
-                                            <a href="#" class="open"><i class="fa fa-external-link"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="hover-layer all-transitions"></div>
-                                    <img src="img/portfolio-12.png" alt="">
-                                    <div class="bottom-info">
-                                        <h6 class="portfolio-title">Project Title</h6>
-                                        <div class="meta">
-                                            <div class="category">Mockup, Web Design</div>
-                                            <div class="likes"><i class="fa fa-heart-o"></i> 1548</div>
-                                        </div>
-                                    </div>
-                                </div><!-- .portfolio-grid-item end -->
+                                <?php echo $printPortfolio;?>
                             </div><!-- .portfolio-grid end -->
                         </div>
                     </div><!-- .row end -->
