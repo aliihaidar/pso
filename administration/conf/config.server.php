@@ -88,37 +88,28 @@ define('FEATURED_PHOTO_MEDBIG', '',     true);
 define('FEATURED_PHOTO_LRG',    '',     true);
 
 /* residence section photo sizes */
-define('NEWS_PHOTO_BO',    '100x100',     true);
-define('NEWS_PHOTO_SML',    '200x200',     true);
-define('NEWS_PHOTO_MED',    '250x150',     true);
-define('NEWS_PHOTO_BIG',    '750x450',     true);
-define('NEWS_PHOTO_MEDBIG', '',     true);
-define('NEWS_PHOTO_LRG',    '',     true);
+define('CLIENT_PHOTO_BO',    '100x100',     true);
+define('CLIENT_PHOTO_SML',    '200x200',     true);
+define('CLIENT_PHOTO_MED',    '250x150',     true);
+define('CLIENT_PHOTO_BIG',    '750x450',     true);
+define('CLIENT_PHOTO_MEDBIG', '',     true);
+define('CLIENT_PHOTO_LRG',    '',     true);
 
 /* residence section photo sizes */
-define('NEWS_IMG_PHOTO_BO',    '100x100',     true);
-define('NEWS_IMG_PHOTO_SML',    '200x200',     true);
-define('NEWS_IMG_PHOTO_MED',    '600x600',     true);
-define('NEWS_IMG_PHOTO_BIG',    '750x450',     true);
-define('NEWS_IMG_PHOTO_MEDBIG', '',     true);
-define('NEWS_IMG_PHOTO_LRG',    '',     true);
+define('SERVICE_PHOTO_BO',    '100x100',     true);
+define('SERVICE_PHOTO_SML',    '200x200',     true);
+define('SERVICE_PHOTO_MED',    '600x600',     true);
+define('SERVICE_PHOTO_BIG',    '750x450',     true);
+define('SERVICE_PHOTO_MEDBIG', '',     true);
+define('SERVICE_PHOTO_LRG',    '',     true);
 
 /* residence section photo sizes */
-define('PROJECTS_CAT_PHOTO_BO',    '100x100',     true);
-define('PROJECTS_CAT_PHOTO_SML',    '70x70',     true);
-define('PROJECTS_CAT_PHOTO_MED',    '',     true);
-define('PROJECTS_CAT_PHOTO_BIG',    '',     true);
-define('PROJECTS_CAT_PHOTO_MEDBIG', '',     true);
-define('PROJECTS_CAT_PHOTO_LRG',    '',     true);
-
-
-/* residence section photo sizes */
-define('PROJECTS_PHOTO_BO',    '100x100',     true);
-define('PROJECTS_PHOTO_SML',    '200x120',     true);
-define('PROJECTS_PHOTO_MED',    '360x360',     true);
-define('PROJECTS_PHOTO_BIG',    '765x570',     true);
-define('PROJECTS_PHOTO_MEDBIG', '',     true);
-define('PROJECTS_PHOTO_LRG',    '',     true);
+define('PORTFOLIO_PHOTO_BO',    '100x100',     true);
+define('PORTFOLIO_PHOTO_SML',    '200x120',     true);
+define('PORTFOLIO_PHOTO_MED',    '360x360',     true);
+define('PORTFOLIO_PHOTO_BIG',    '765x570',     true);
+define('PORTFOLIO_PHOTO_MEDBIG', '',     true);
+define('PORTFOLIO_PHOTO_LRG',    '',     true);
 
 
 /* residence section photo sizes */

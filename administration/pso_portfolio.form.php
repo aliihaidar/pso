@@ -51,7 +51,7 @@ switch ($in2Action) {
             $Extention = explode('.', $uploadedFile['name']);
             $uploadedFile['filename'] = 'po_img_' . $lastId . '.' . $Extention[1];
             $fileObj = new file2($uploadedFile);
-            $fileObj->manipImageUpload('pso_portfolio', $lastId, PROJECTS_PHOTO_SML, PROJECTS_PHOTO_MED, PROJECTS_PHOTO_BIG, true, false, PROJECTS_PHOTO_MEDBIG, PROJECTS_PHOTO_LRG, PROJECTS_PHOTO_BO);
+            $fileObj->manipImageUpload('pso_portfolio', $lastId, PORTFOLIO_PHOTO_SML, PORTFOLIO_PHOTO_MED, PORTFOLIO_PHOTO_BIG, true, false, PORTFOLIO_PHOTO_MEDBIG, PORTFOLIO_PHOTO_LRG, PORTFOLIO_PHOTO_BO);
             $fileObj = null;
         }
         
@@ -90,7 +90,7 @@ switch ($in2Action) {
             $Extention = explode('.', $uploadedFile['name']);
             $uploadedFile['filename'] = 'po_img_' . $_REQUEST['po_id'] . '.' . $Extention[1];
             $fileObj = new file2($uploadedFile);
-            $fileObj->manipImageUpload('pso_portfolio', $_REQUEST['po_id'], FPROJECTS_PHOTO_SML, PROJECTS_PHOTO_MED, PROJECTS_PHOTO_BIG, true, false, PROJECTS_PHOTO_MEDBIG, PROJECTS_PHOTO_LRG, PROJECTS_PHOTO_BO);
+            $fileObj->manipImageUpload('pso_portfolio', $_REQUEST['po_id'], FPORTFOLIO_PHOTO_SML, PORTFOLIO_PHOTO_MED, PORTFOLIO_PHOTO_BIG, true, false, PORTFOLIO_PHOTO_MEDBIG, PORTFOLIO_PHOTO_LRG, PORTFOLIO_PHOTO_BO);
             $fileObj = null;
         }
         

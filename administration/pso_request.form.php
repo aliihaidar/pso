@@ -48,7 +48,7 @@ switch ($in2Action) {
             $Extention = explode('.', $uploadedFile['name']);
             $uploadedFile['filename'] = 're_img_' . $lastId . '.' . $Extention[1];
             $fileObj = new file2($uploadedFile);
-            $fileObj->manipImageUpload('pso_request', $lastId, STATICPAGE_PHOTO_SML, STATICPAGE_PHOTO_MED, STATICPAGE_PHOTO_BIG, true, false, STATICPAGE_PHOTO_MEDBIG, STATICPAGE_PHOTO_LRG, STATICPAGE_PHOTO_BO);
+            $fileObj->manipImageUpload('pso_request', $lastId, REQUEST_PHOTO_SML, REQUEST_PHOTO_MED, REQUEST_PHOTO_BIG, true, false, REQUEST_PHOTO_MEDBIG, REQUEST_PHOTO_LRG, REQUEST_PHOTO_BO);
             $fileObj = null;
         }
         
@@ -87,7 +87,7 @@ switch ($in2Action) {
             $Extention = explode('.', $uploadedFile['name']);
             $uploadedFile['filename'] = 're_img_' . $_REQUEST['re_id'] . '.' . $Extention[1];
             $fileObj = new file2($uploadedFile);
-            $fileObj->manipImageUpload('pso_request', $_REQUEST['re_id'],STATICPAGE_PHOTO_SML, STATICPAGE_PHOTO_MED, STATICPAGE_PHOTO_BIG, true, false, STATICPAGE_PHOTO_MEDBIG, STATICPAGE_PHOTO_LRG, STATICPAGE_PHOTO_BO);
+            $fileObj->manipImageUpload('pso_request', $_REQUEST['re_id'],REQUEST_PHOTO_SML, REQUEST_PHOTO_MED, REQUEST_PHOTO_BIG, true, false, REQUEST_PHOTO_MEDBIG, REQUEST_PHOTO_LRG, REQUEST_PHOTO_BO);
             $fileObj = null;
         }
         
