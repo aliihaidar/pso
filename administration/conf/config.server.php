@@ -111,19 +111,12 @@ define('PROJECTS_CAT_PHOTO_BIG',    '',     true);
 define('PROJECTS_CAT_PHOTO_MEDBIG', '',     true);
 define('PROJECTS_CAT_PHOTO_LRG',    '',     true);
 
-/* residence section photo sizes */
-define('PROJECTS_MEDIA_PHOTO_BO',    '100x100',     true);
-define('PROJECTS_MEDIA_PHOTO_SML',    '200x200',     true);
-define('PROJECTS_MEDIA_PHOTO_MED',    '',     true);
-define('PROJECTS_MEDIA_PHOTO_BIG',    '750x450',     true);
-define('PROJECTS_MEDIA_PHOTO_MEDBIG', '',     true);
-define('PROJECTS_MEDIA_PHOTO_LRG',    '',     true);
 
 /* residence section photo sizes */
 define('PROJECTS_PHOTO_BO',    '100x100',     true);
 define('PROJECTS_PHOTO_SML',    '200x120',     true);
-define('PROJECTS_PHOTO_MED',    '360x216',     true);
-define('PROJECTS_PHOTO_BIG',    '750x450',     true);
+define('PROJECTS_PHOTO_MED',    '360x360',     true);
+define('PROJECTS_PHOTO_BIG',    '765x570',     true);
 define('PROJECTS_PHOTO_MEDBIG', '',     true);
 define('PROJECTS_PHOTO_LRG',    '',     true);
 
