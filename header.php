@@ -16,7 +16,7 @@
     </div><!-- #top-bar end -->  
 
     <!-- #header start -->
-    <header id="header">
+    <header id="header" class="">
         <!-- .container start -->
         <div class="container">
             <!-- .navbar start -->
@@ -40,8 +40,8 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="<?= (($page=='home')?'active':'') ?>"><a href="index.php">Home</a></li>
-                            <li class="<?= (($page=='services')?'active':'') ?>"><a href="services.php" class="navbar-toggle">Services</a></li>
                             <li class="<?= (($page=='about')?'active':'') ?>"><a href="about.php" class="navbar-toggle">About Us</a></li>
+                            <li class="<?= (($page=='services')?'active':'') ?>"><a href="services.php" class="navbar-toggle">Services</a></li>
                             <li class="<?= (($page=='portfolio')?'active':'') ?>"><a href="portfolio.php">Portfolio</a></li>
                             <li class="<?= (($page=='blog')?'active':'') ?>"><a href="#">Blog</a></li>
                             <li class="<?= (($page=='features')?'active':'') ?>"><a href="#">Features</a></li>
@@ -54,23 +54,62 @@
     </header><!-- #header end -->
 </div>
 
+<script src="js/jquery-1.11.0.min.js"></script>
+
+<script>
+
+$(window).scroll(function() {
+
+    if ($(window).scrollTop() > 50) {
+        $('#header').addClass('always-visible sticky');
+    } else {
+        $('#header').removeClass('always-visible sticky');
+    }
+});
+
+</script>
+
 <style>
+
+.sticky
+{
+    position: fixed !important;
+    top: 0px !important;
+}
+.banner-btn
+{
+    color: #00ADEE !important;
+}
+.banner-btn:hover
+{
+    color: #fff !important;
+}
 .active a
 {
     color: #00ADEE !important;
 }
-#top-bar
-{
-    position: relative; !important;
-    /*top: 0 !important;*/
-    /*width: 100% !important;*/
-    background-color: white !important;
-    z-index: 99999999999999 !important;
-}
 #header
 {
-    position: relative !important;
-    background-color: white !important;
-    z-index: 99999999999999 !important;
+    background-color: rgba(255,255,255,0.95) !important;
+    z-index: 99 !important;
 }
+.always-visible
+{
+    max-height: 80px !important;
+}
+.always-visible a img
+{
+    max-height: 80px !important;
+    max-width: 80px !important;
+    margin-top: -5px !important;
+}
+.always-visible ul li a
+{
+    padding-top: 30px !important;
+}
+.navbar-nav li a
+{
+    padding-top: 60px !important;
+}
+
 </style>

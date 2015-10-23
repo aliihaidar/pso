@@ -42,7 +42,8 @@
 
 </head>
 
-<body>  
+<body>
+
     <!-- #header & top menu start -->
     <?php include 'header.php'; ?>
     <!--  #header & top menu end  -->
@@ -501,7 +502,7 @@ style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333
                 <?php include 'footer.php'; ?>
                 <!-- #footer end -->
 
-                <script src="js/jquery-1.11.0.min.js"></script><!-- jQuery Library -->
+                <script src="js/jquery-1.11.0.min.js"></script>
                 <script src="js/jquery.bootstrap.min.js"></script><!-- bootstrap -->
                 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
                 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
@@ -511,19 +512,13 @@ style='font-family: "Raleway"; font-size: 36px; font-weight: 700; color: #333333
                 <script src="js/circles.min.js"></script><!-- Circles JS for Round Skills -->
                 <script src="https://maps.googleapis.com/maps/api/js?&amp;callback=initMap&amp;signed_in=true" async defer></script>
                 <script src="js/scrolling_pack.js"></script><!-- Scrolling Pack JS -->
-                <script src="js/script.js"></script><!-- Last file with all custom scripts -->
+                <script src="js/script.js"></script>
+
             </body>
 
             <style type="text/css">
 
-            .banner-btn
-            {
-                color: #00ADEE !important;
-            }
-            .banner-btn:hover
-            {
-                color: #fff !important;
-            }
+            
 
             </style>
 

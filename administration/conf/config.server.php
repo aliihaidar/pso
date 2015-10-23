@@ -26,11 +26,6 @@ define('DBHOST',    'localhost');
 define('DBUSER',    'root');
 define('DBPASS',    '');
 define('DBNAME',    'pso_db');
-
-//define('DBHOST',    'localhost');
-//define('DBUSER',    'intwohos_energy');
-//define('DBPASS',    'xTL-FH}%E&TU');
-//define('DBNAME',    'intwohos_energyone');
 define('DBPORT', '3306');
 
 /**
@@ -38,14 +33,15 @@ define('DBPORT', '3306');
  */
 define('REGISTRATION_EMAIL',         'info@pso.com',      true);
 define('PROJECT_EMAIL',         'registration@pso.com',      true);
-define('PROJECT_URL',           'http://localhost/pso/',      true);
-define('PROJECT_PATH',          'C:/wamp/www/pso/',                true);
-
+define('PROJECT_URL',           'sirius.aliihaidar.dev/Github/pso/',      true);
+define('PROJECT_PATH',          '/Library/Server/Web/Data/Sites/sirius/Github/pso/',                true);
 
 //online credentials
 //define('PROJECT_URL',           'http://solutions.in2host.net/energyone/',      true);
 //define('PROJECT_PATH',          '/home1/intwohos/public_html/solutions/energyone/', true);
 
+// define('PROJECT_URL',           'sirius.aliihaidar.dev/Github/pso/',      true);
+// define('PROJECT_PATH',          '/Library/Server/Web/Data/Sites/sirius/Github/pso/',                true);
 
 /**
  * Project's related constants
